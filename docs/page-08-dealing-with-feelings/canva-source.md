@@ -3,7 +3,7 @@
 The image assets for Page 8 were created in Canva.
 
 ## Canva design link
-[🔗 https://www.canva.com/xxxxxxxxxxxx](https://www.canva.com/design/DAG9BX1oTvc/_YSY5bHaxVLntJjzc9MT5Q/view?utm_content=DAG9BX1oTvc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4ceb9524c5)
+https://www.canva.com/folder/FAF9BVMdvh4
 
 ## Notes
 - This Canva file contains the original design used to export PNG assets.
