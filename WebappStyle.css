@@ -1,0 +1,362 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #2d3bbb 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main page container */
+.page-container {
+    width: 100%;
+    max-width: 900px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation menu */
+.game-menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background: #f8f9fa;
+    flex-wrap: wrap;
+}
+
+.menu-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 3px solid #667eea;
+    background: white;
+    color: #667eea;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #764ba2;
+}
+
+/* Game box */
+.game-box {
+    margin: 20px;
+    padding: 30px;
+    border: 5px solid #667eea;
+    border-radius: 15px;
+    min-height: 400px;
+    background: #fff;
+    position: relative;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Game containers */
+.game-container {
+    display: none;
+    animation: fadeIn 0.4s ease-in;
+}
+
+.game-container.active {
+    display: block;
+}
+
+.game-container h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.game-content {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer */
+footer {
+    background: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+/* ============================================ */
+/* GAME 1: COLORING GAME STYLES */
+/* ============================================ */
+
+.coloring-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+.color-palette {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.color-btn {
+    width: 45px;
+    height: 45px;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.color-btn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-btn.active {
+    border-color: #333;
+    border-width: 4px;
+    transform: scale(1.1);
+}
+
+.road-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+.road-background {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.cars-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.car {
+    position: absolute;
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.car:hover {
+    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.4));
+}
+
+/* Position cars on the road */
+#car1 {
+    top: 15%;
+    left: 55%;
+    transform: translateX(-50%);
+}
+
+#car2 {
+    top: 65%;
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+.reset-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.reset-btn:active {
+    transform: translateY(0);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    
+    .game-box {
+        padding: 20px;
+        margin: 15px;
+        min-height: 350px;
+    }
+    
+    .game-container h2 {
+        font-size: 1.5em;
+    }
+    
+    .menu-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .color-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .car {
+        width: 70px;
+    }
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .page-container {
+        border-radius: 15px;
+    }
+    
+    header {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 1.3em;
+    }
+    
+    .game-menu {
+        padding: 15px;
+        gap: 8px;
+    }
+    
+    .menu-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+        flex: 1 1 calc(50% - 8px);
+        min-width: 120px;
+    }
+    
+    .game-box {
+        padding: 15px;
+        margin: 10px;
+        min-height: 300px;
+        border-width: 3px;
+    }
+    
+    .game-container h2 {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+    
+    .game-content {
+        padding: 15px;
+        min-height: 250px;
+    }
+    
+    footer {
+        padding: 12px;
+        font-size: 12px;
+    }
+    
+    .coloring-game {
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .color-palette {
+        gap: 8px;
+        padding: 8px;
+    }
+    
+    .color-btn {
+        width: 35px;
+        height: 35px;
+        border-width: 2px;
+    }
+    
+    .color-btn.active {
+        border-width: 3px;
+    }
+    
+    .car {
+        width: 60px;
+    }
+    
+    .reset-btn {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+}

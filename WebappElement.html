@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HNZ Growing Stronger Together</title>
+    <link rel="stylesheet" href="WebappStyle.css">
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <h1> Growing Stronger Together </h1>
+        </header>
+
+        <nav class="game-menu">
+            <button class="menu-btn active" data-game="game1">Game 1</button>
+            <button class="menu-btn" data-game="game2">Game 2</button>
+            <button class="menu-btn" data-game="game3">Game 3</button>
+        </nav>
+
+        <main class="game-box">
+            <!-- Game containers -->
+            <div id="game1" class="game-container active">
+                <h2> Color the Cars! </h2>
+                <div class="game-content coloring-game">
+                    <div class="color-palette">
+                        <button class="color-btn" data-color="#FF6B6B" style="background-color: #FF6B6B;" title="Red"></button>
+                        <button class="color-btn" data-color="#4ECDC4" style="background-color: #4ECDC4;" title="Teal"></button>
+                        <button class="color-btn" data-color="#45B7D1" style="background-color: #45B7D1;" title="Blue"></button>
+                        <button class="color-btn" data-color="#FFA07A" style="background-color: #FFA07A;" title="Orange"></button>
+                        <button class="color-btn" data-color="#98D8C8" style="background-color: #98D8C8;" title="Mint"></button>
+                        <button class="color-btn" data-color="#F7DC6F" style="background-color: #F7DC6F;" title="Yellow"></button>
+                        <button class="color-btn" data-color="#BB8FCE" style="background-color: #BB8FCE;" title="Purple"></button>
+                        <button class="color-btn" data-color="#85C1E2" style="background-color: #85C1E2;" title="Sky Blue"></button>
+                        <button class="color-btn active" data-color="#FF1744" style="background-color: #FF1744;" title="Bright Red"></button>
+                        <button class="color-btn" data-color="#00C853" style="background-color: #00C853;" title="Green"></button>
+                    </div>
+                    <div class="road-container">
+                        <img src="Resources/Activity-Car/road-s-curve.png" alt="Road" class="road-background">
+                        <div class="cars-layer">
+                            <img src="Resources/Activity-Car/car-left.svg" alt="Car Left" class="car colorable-car" id="car1" data-car="1">
+                            <img src="Resources/Activity-Car/car-right.svg" alt="Car Right" class="car colorable-car" id="car2" data-car="2">
+                        </div>
+                    </div>
+                    <button class="reset-btn">Reset Colors</button>
+                </div>
+            </div>
+
+            <div id="game2" class="game-container">
+                <h2>Game 2: Crossword</h2>
+                <div class="game-content">
+                    <p>Game 2 content will go here...</p>
+                </div>
+            </div>
+
+            <div id="game3" class="game-container">
+                <h2>Game 3: Spot the difference/find object</h2>
+                <div class="game-content">
+                    <p>Game 3 content will go here...</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p> Insert Footer if needed</p>
+        </footer>
+    </div>
+
+    <script src="Games.js"></script>
+</body>
+</html>
